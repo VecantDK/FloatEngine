@@ -1,5 +1,6 @@
 #pragma once
 #include <raylib.hpp>
+#include <iostream>
 class F_Text
 {
 	char* m_text;
@@ -8,7 +9,9 @@ public:
 	F_Text operator=(const F_Text& text);
 	bool operator==(const char* text);
    	bool operator==(const F_Text& text);
-	operator const char*();
+	operator const char* ();
+	const char* cstr();
+	std::string tostr();
 	F_Text operator+(const F_Text& text);
 	F_Text operator+(const char* text);
 	void operator+=(const char* text);

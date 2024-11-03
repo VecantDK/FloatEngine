@@ -211,3 +211,4 @@ bool IsConvexPolygon(const std::vector<FVec2>& points);
 // 函数：分解凹形多边形为三角形
 std::vector<F_Shape> DecomposeConcavePolygon(const F_Shape& concavePolygon);
 bool GJK_Collision_Plus(const F_Shape& shape1, const F_Shape& shape2);
+

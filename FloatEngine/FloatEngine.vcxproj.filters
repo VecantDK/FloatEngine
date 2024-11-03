@@ -51,6 +51,12 @@
     <Filter Include="源文件\Console">
       <UniqueIdentifier>{38e0d928-4430-4eeb-a5f7-5d112b4a57ae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Anim">
+      <UniqueIdentifier>{1090c659-dbb1-4294-a20a-e6a7ed9555e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Anim">
+      <UniqueIdentifier>{dc541f68-2d54-4dba-83bd-b3dd7913a847}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
@@ -90,6 +96,9 @@
     </ClCompile>
     <ClCompile Include="F_Console.cpp">
       <Filter>源文件\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="F_Anim.cpp">
+      <Filter>源文件\Anim</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
@@ -137,6 +146,12 @@
     </ClInclude>
     <ClInclude Include="F_Resource.h">
       <Filter>头文件\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="F_Anim.h">
+      <Filter>头文件\Anim</Filter>
+    </ClInclude>
+    <ClInclude Include="F_Easings.h">
+      <Filter>头文件\Anim</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

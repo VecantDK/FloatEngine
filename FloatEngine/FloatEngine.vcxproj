@@ -142,6 +142,7 @@
     <ClCompile Include="Block.cpp" />
     <ClCompile Include="FloatAPI.cpp" />
     <ClCompile Include="FMath.cpp" />
+    <ClCompile Include="F_Anim.cpp" />
     <ClCompile Include="F_Audio.cpp" />
     <ClCompile Include="F_Console.cpp" />
     <ClCompile Include="F_Resource.cpp" />
@@ -158,8 +159,10 @@
     <ClInclude Include="FloatApi.h" />
     <ClInclude Include="FloatEngine.h" />
     <ClInclude Include="FMath.h" />
+    <ClInclude Include="F_Anim.h" />
     <ClInclude Include="F_Audio.h" />
     <ClInclude Include="F_Console.h" />
+    <ClInclude Include="F_Easings.h" />
     <ClInclude Include="F_Resource.h" />
     <ClInclude Include="F_Text.h" />
     <ClInclude Include="Game.h" />

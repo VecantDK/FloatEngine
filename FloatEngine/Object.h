@@ -1,7 +1,5 @@
 #pragma once
-#include "winfuns.h"
 #include "FloatApi.h"
-#include <raylib.hpp>
 #include <string>
 #include "Enum.h"
 class Object
@@ -15,16 +13,14 @@ protected:
 	void change_pro(int pro) {
 		_m_obj_pro = pro;
 	}
-	void Draw_Block(
-		
-		Color col);
+	void Draw_Block(Color col);
 	void Block_Chase_Pos(float offset_x, float offset_y);
 	bool Is_Meeting(float _x, float _y, Object* other);
 public:
 	int image_index;
 	Texture *sprite_index;
 	int depth;
-	Rectangle m_block;
+	F_Rectangle m_block;
 	float m_angle;
 	Vector2 m_origin;
 	float x;
@@ -51,7 +47,7 @@ inline bool Is_Collision(Object* o1, Object* o2) {
 	r1.Set_Angle(o1->m_angle);
 	r2.Set_Rectangle(Rectangle{ o2->x,o2->y,o2->m_block.width,o2->m_block.height });
 	r2.Set_Angle(o2->m_angle);
-	bool is = GJK_Collision(r1,r2);
+	bool is = GJK_Collision(r1, r2);
 	return is;
 }
 

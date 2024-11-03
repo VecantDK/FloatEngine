@@ -1,8 +1,7 @@
 #include "Room.h"
-#include "winfuns.h"
-#include <raylib.hpp>
 void EventInstance(Object* inst, const char* event) {
-	HWND hWnd = (HWND)GetWindowHandle();
+	using namespace WinFuns;
+	void* hWnd = GetWindowHandle();
 	if (TextIsEqual(event, "onEnter")) {
 		if (inst) inst->onEnter();
 		else MessageBox(hWnd, TextFormat("Instance %d Is Error In onEnter", inst), "Error", 0);

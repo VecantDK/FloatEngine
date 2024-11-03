@@ -27,6 +27,16 @@ F_Text::operator const char* ()
 	return m_text;
 }
 
+const char* F_Text::cstr()
+{
+	return m_text;
+}
+
+std::string F_Text::tostr()
+{
+	return std::string(m_text);
+}
+
 void F_Text::operator+=(const F_Text& text)
 {
 	TextInsert(m_text, text.m_text, TextLength(m_text));

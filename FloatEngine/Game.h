@@ -1,6 +1,4 @@
 #pragma once
-#include <raylib.hpp>
-#include "winfuns.h"
 #include "FloatApi.h"
 #include "F_Console.h"
 class Game
@@ -10,15 +8,19 @@ class Game
 	int _h;
 	char* _title;
 	
-	
-	
-	Color background_col;
+	bool _load_icon;
+	int _icon_number;
+	Image _icons[100];
+	raylib::Color background_col;
 public:
 	Game();
-	void CreateWindow(int w,int h,const char*title, int flags = FLAG_WINDOW_ALWAYS_RUN | FLAG_MSAA_4X_HINT);
+	void CreateWindow(int w,int h,const char*title,  bool debug = true, int flags = 288);
 	bool CanStart();
 	void Play(int fps);
 	void Destroy();
-	void Set_Background_Color(Color bk_col);
+	void Set_Background_Color(raylib::Color bk_col);
+	void Set_Console_Icon(int id);
+	void Set_Icons(Image* icons,int n);
+	void Set_Icon(Image icon);
 };
 

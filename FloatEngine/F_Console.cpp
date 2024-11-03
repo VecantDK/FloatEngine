@@ -1,5 +1,6 @@
 #include "F_Console.h"
 void Init_FConsole() {
+    using namespace WinFuns;
     // 控制台显示乱码纠正
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);

@@ -1,30 +1,37 @@
 #pragma once
 #include "Object.h"
 #include "raymath.hpp"
-typedef bool(*ActorMoveable)();
-typedef bool(*ActorIsOnWall)();
 class Actor :
     public Object
 {
+    std::vector<class Block*> _blocks;
 protected:
     bool Met_Before;
     int Met_Timer;
-    //用户事件
-    void Event_User(int index) override;
-
 public:
+    //构造，析构
+    Actor();
+    ~Actor();
     //mode
     bool active;
     bool moveable;
     bool jumpable;
     bool isJump;
     //values
-    
-    
-    Vector2 gravity;
-    
-    //构造，析构
-    Actor();
-    ~Actor();
+    FVec2 gravity;
+    void Add_New_Block(class Block* block);
+    template<class BLOCK_T>
+    void Add_New_Block(BLOCK_T block);
+    void Delete_Back_Block();
+    void Delete_Block(int index);
+    void Move(float _x, float _y);
+    //限制
+    void Limit_Actor();
 };
 
+template<class BLOCK_T>
+inline void Actor::Add_New_Block(BLOCK_T block)
+{
+    BLOCK_T* block = new BLOCK_T;
+    _blocks.push_back(block);
+}
